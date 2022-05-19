@@ -20,7 +20,22 @@ let Book=[
     //     writer:'Abdullah'
     // }
 ]
-
+app.get('/createBook',(req,res)=>{
+    res.render('create')
+})
+app.post('/addBook',(req,res)=>{
+    const id=req.body.id
+    const name=req.body.name
+    const location=req.body.location
+    const writer=req.body.writer
+        Book.push({
+            id:id,
+            name:name,
+            location:location,
+            writer:writer
+        })
+    res.redirect('/books')
+})
 app.get('/books',(req,res)=>{
     res.render('index',{
         book:Book
@@ -68,22 +83,7 @@ app.post('/update/:id',(req,res)=>{
             // console.log(req.body.id)
     res.redirect('/books')
 })
-app.get('/createBook',(req,res)=>{
-    res.render('create')
-})
-app.post('/addBook',(req,res)=>{
-    const id=req.body.id
-    const name=req.body.name
-    const location=req.body.location
-    const writer=req.body.writer
-        Book.push({
-            id:id,
-            name:name,
-            location:location,
-            writer:writer
-        })
-    res.redirect('/books')
-})
+
 app.post('/delete/:id',(req,res)=>{
     for(let i=0;i<Book.length;i++){
         if(req.params.id==Book[i].id){

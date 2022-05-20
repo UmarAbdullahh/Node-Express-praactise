@@ -1,0 +1,36 @@
+{
+  "name": "rest-api-crud",
+  "version": "1.0.0",
+  "description": "user authentication and authorization on role base",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "build": "babel src -d dist",
+    "start": "npm run build && nodemon dist/index.js",
+    "serve": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UmarAbdullahh/Node-Express-praactise.git"
+  },
+  "author": "Umar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UmarAbdullahh/Node-Express-praactise/issues"
+  },
+  "homepage": "https://github.com/UmarAbdullahh/Node-Express-praactise#readme",
+  "dependencies": {
+    "husky": "^8.0.1",
+    "prettier": "^2.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}

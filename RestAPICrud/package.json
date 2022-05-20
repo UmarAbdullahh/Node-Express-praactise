@@ -1,13 +1,13 @@
 {
   "name": "rest-api-crud",
   "version": "1.0.0",
-  "description": "user authentication and authorization on role base",
+  "description": "authentication and user authorization",
   "main": "index.js",
-  "type": "module",
+  "type": "module", 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install",
-    "build": "babel src -d dist",
+    "dev": "nodemon src/index.js",
+    "build":"babel src -d dist",
     "start": "npm run build && nodemon dist/index.js",
     "serve": "node dist/index.js"
   },
@@ -15,22 +15,22 @@
     "type": "git",
     "url": "git+https://github.com/UmarAbdullahh/Node-Express-praactise.git"
   },
-  "author": "Umar",
+  "author": "umar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/UmarAbdullahh/Node-Express-praactise/issues"
   },
   "homepage": "https://github.com/UmarAbdullahh/Node-Express-praactise#readme",
   "dependencies": {
-    "husky": "^8.0.1",
-    "prettier": "^2.6.2"
-  },
-  "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.0",
     "@babel/preset-env": "^7.18.0",
-    "eslint": "^8.15.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2",
+    "swagger": "^0.7.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0"
   }
 }

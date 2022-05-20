@@ -3,15 +3,12 @@
         "node": true,
         "es2021": true
     },
-    "extends": [
-        "airbnb-base"
-    ],
+    "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "rules": {
-        // enforce return after a callback
     "callback-return": "off",
 
     // require all requires be top-level
